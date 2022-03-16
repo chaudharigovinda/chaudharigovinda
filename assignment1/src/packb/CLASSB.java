@@ -4,7 +4,7 @@ public class CLASSB {
  
 	protected float var5=2.0f;
 	private double var6=2.2;
-	public boolean var7;
+	public boolean var8;
 	//int char var8;
 
 public void m1() {
