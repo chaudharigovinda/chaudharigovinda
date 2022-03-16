@@ -10,7 +10,7 @@ public class CLASSB {
 public void m1() {
 	
 	
-	System.out.println("i am");
+	System.out.println("i in am");
 }
 	
 	public static int var9;
