@@ -12,7 +12,7 @@ import org.openqa.selenium.TakesScreenshot;
 public class utilityclass extends reporter {
 
 	
-	public static String captureScreen(){
+	public static  String  captureScreen(){
 		
 		// convert webdriver object to takescreenshort
 		String datename=new SimpleDateFormat("yymmddhhmmss").format( new Date());
@@ -28,6 +28,8 @@ public class utilityclass extends reporter {
 		}catch(IOException m) {
 			m.printStackTrace();
 		}
+		return destination;
+	
 		
 		
 	}	
