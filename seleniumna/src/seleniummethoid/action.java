@@ -13,6 +13,8 @@ public class action {
 		System.setProperty("webdriver.chrome.driver", "Resourses/chromedriver.exe");
 		ChromeDriver obj=new ChromeDriver();
 		obj.get("https://demoqa.com/buttons");
+	obj.navigate().refresh();
+	obj.manage().window().maximize();
 		Actions obj1=new Actions(obj);// actions is class so we create object of it
 		obj1.doubleClick(obj.findElement(By.id("doubleClickBtn"))).perform(); // here use perform to operate
 		obj1.contextClick(obj.findElement(By.id("rightClickBtn"))).perform();

@@ -22,19 +22,19 @@ public class bro {
 		ReadProperty();
 		String browser = property.getProperty("browser");
 		if(browser.equalsIgnoreCase("chrome")) {
-			System .setProperty("webdriver.chrome.driver", ".\\src\\main\\resources\\chromedriver.exe");
+			System .setProperty("webdriver.chrome.driver", ".\\src\\test\\resources\\chromedriver.exe");
 			driver=new ChromeDriver();
 			
 		}
 		
-		driver.get(property.getProperty("url"));
+		driver.get(property.getProperty("url1"));
 	}
 
 	public static  void ReadProperty() {
 		// TODO Auto-generated method stub
 		try {
 			property =new Properties();
-			property.load(new FileInputStream(".\\src\\main\\resources\\prop.pro"));
+			property.load(new FileInputStream(".\\src\\test\\resources\\config.propertise"));
 		}catch(FileNotFoundException m) {}
 		catch(IOException n) {}
 	}

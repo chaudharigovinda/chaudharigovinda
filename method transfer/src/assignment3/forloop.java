@@ -6,7 +6,7 @@ public class forloop {
 		// Whether number is prime or not
 		int num1=11;
 		boolean flag=true; //if false then it will show not prime no
-		for (int i=2;i<=num1/2;++i) { // num/2 that means it run for one time only
+		for (int i=2;i<=num1/2;++i) { // num/2 that means prime no divide by 2
 		if(num1%i==0) {
 			flag=false;// above flag =true so at this stage flag =false 
 			break;
@@ -30,14 +30,14 @@ public class forloop {
 	}
 	
 	// sum of first 10 natural number
-	int nsum=0;// starting for plus
-	for(int nanum=1;nanum<=10;++nanum) { // a is first natural number
-		nsum+=nanum;//+ means add nanum in nsum
+	int j=0;// starting for plus
+	for(int k=1;k<=10;++k) { // a is first natural number
+		j+=k;//+ means add nanum in nsum
 		
-		//nanum == natural number
-		// nsum== natural  no sum
+		//k == natural number
+		// j== natural  no sum
 	
-		System.out.println(nsum);  // take nsum in bracket
+		System.out.println(j);  // take j in bracket
 	
 	}
 	
@@ -66,13 +66,31 @@ public class forloop {
 		
 		System.out.println("fibonacci number" + sum);
 	}
-	
-	
-	
+	//sum of first 20prime no
+	int s=0;
+	for(int n=1;n<=20;n++) {
+		int c=0;
+		for(int i=2;i<=n/2;i++) {
+			if(n%i==0) {
+				c++;
+				break;
+			}
+		}
+		if(c==0&&n!=1) {
+			 s= s+n;
+			 
+		}
+		System.out.println(s);
 	}
+	}
+	}
+	
+	
+
 	
 		
-	}
+	
+	
 
 
 

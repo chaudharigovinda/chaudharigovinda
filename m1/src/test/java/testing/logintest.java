@@ -1,6 +1,7 @@
 package testing;
 
 import com.f1.bro;
+import com.f1.readexcel;
 import com.orm.*;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -10,7 +11,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.orm.*;
-public class logintest extends bro{
+public class logintest extends readexcel{
 	static ExtentTest test;
 	static ExtentReports report;
 	@BeforeClass(alwaysRun = true)
@@ -23,27 +24,14 @@ public class logintest extends bro{
 		test=report.startTest("verify login is succsesful with valid credential");
 		loginpage log1=new loginpage(driver);
 		log1.login("Admin", "admin123");
+		//log1.login(readexcel.getStringCellData("tc1","username"),readexcel.getStringCellData("tc1","password"));
 		if(new dashboard(driver).dashboardtext().isDisplayed()) {
 			test.log(LogStatus.PASS, "user able to login");
 		}else {
 			test.log(LogStatus.FAIL, "user nat able to login");
 		}
-	}
-	
-	@Test(description = "verify invalid credential messabe is display",priority = 2)
-	public void tc2() {
-		test=report.startTest("verify invalid credential messabe is display");
-		loginpage log2=new loginpage(driver);
-		log2.nologin("admine", "admin");
-		if(log2.invalidmessage().isDisplayed()) {//if(log2.invalidmessage().isDisplayed()
-			test.log(LogStatus.PASS, "user not able to login"+log2.invalidmessage().getText());// it is log method to get report
-		}else {
-			test.log(LogStatus.FAIL, "user is able to login");
-		}
 		
 	}
-	
-		
 	
 	
 	

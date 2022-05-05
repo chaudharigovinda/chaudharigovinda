@@ -13,8 +13,8 @@ public class actionresizable {
 		ChromeDriver obj=new ChromeDriver();
 		obj.get("https://demoqa.com/resizable");
 		Actions obj1=new Actions(obj);// actions is class so we create object of it
-		WebElement a=obj.findElement(By.xpath("//div[@id='resizableBoxWithRestriction']"));
-		obj1.clickAndHold(a).moveByOffset(300, 200).release().build().perform();
+		WebElement a=obj.findElement(By.id("resizableBoxWithRestriction"));
+		obj1.clickAndHold(a).moveByOffset(200, 300).release().build().perform();
 		// above first we have to clickand hold the cursor of bottom of window which hs to expand then give dimention by move method then relese it
 	}
 

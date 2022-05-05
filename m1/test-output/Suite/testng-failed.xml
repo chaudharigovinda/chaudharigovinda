@@ -6,10 +6,12 @@
       <class name="testing.logintest">
         <methods>
           <include name="result"/>
+          <include name="reporter"/>
           <include name="browser_initia"/>
           <include name="endtest"/>
+          <include name="tc1"/>
           <include name="teardown"/>
-          <include name="tc2"/>
+          <include name="ExcelConnect"/>
         </methods>
       </class> <!-- testing.logintest -->
     </classes>

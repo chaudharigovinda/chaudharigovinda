@@ -37,10 +37,10 @@ public class loginpage  {
 			getlogin().click();
 		}
 		
-		public  void nologin(String username,String password) {
+		/*public  void nologin(String username,String password) {
 			getUsernametext().sendKeys(username);
 			getpassword().sendKeys(password);
 			getlogin().click();
 			System.out.println(invalidmessage().isDisplayed());
-		}
+		}*/
 }

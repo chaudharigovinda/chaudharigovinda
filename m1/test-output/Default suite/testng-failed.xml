@@ -7,8 +7,9 @@
         <methods>
           <include name="result"/>
           <include name="browser_initia"/>
-          <include name="tc1"/>
+          <include name="endtest"/>
           <include name="teardown"/>
+          <include name="tc2"/>
         </methods>
       </class> <!-- testing.logintest -->
     </classes>
